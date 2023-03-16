@@ -11,7 +11,11 @@ protected ArrayList<Course> courses;
         this.courses = new ArrayList<Course>();
     }
     public abstract void addCourse(Course course);
-    public abstract void removeCourse(Course course);
+//    public abstract void removeCourse(Course course);
+public final void removeCourse(Course course) {
+    courses.remove(course);
+    course.removeStudentOrTeacher(this);
+}
     public abstract void setName();
     public  String getId;
     public String getName;
