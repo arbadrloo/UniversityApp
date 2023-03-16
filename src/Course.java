@@ -13,6 +13,15 @@ public class Course {
             teacher = null;
         }
     }
+    public void addStudentOrTeacher(Person person) {
+        if (person instanceof Student) {
+            students.add((Student) person);
+            person.addCourse(this);
+        } else if (person instanceof Teacher) {
+            teacher = (Teacher) person;
+            person.addCourse(this);
+        }
+    }
 
     public ArrayList<Student> getStudents() {
         return students;

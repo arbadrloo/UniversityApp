@@ -15,12 +15,21 @@ public class Student extends Person {
         courses.add(course);
     }
 
-    public void removeCourse(Course course) {
-        courses.remove(course);
+    @Override
+    public String getId() {
+        return super.getId();
     }
-    public void addCourse(Course course){
 
+    @Override
+    public String getName() {
+        return super.getName();
     }
+
+    @Override
+    public ArrayList<Course> getCourses() {
+        return super.getCourses();
+    }
+
     public void setName(){
 
     }

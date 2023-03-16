@@ -7,13 +7,18 @@ public class Teacher extends Person{
     }
 
     @Override
-    public void addCourse(Course course) {
-
+    public String getId() {
+        return super.getId();
     }
 
     @Override
-    public void removeCourse(Course course) {
+    public String getName() {
+        return super.getName();
+    }
 
+    @Override
+    public ArrayList<Course> getCourses() {
+        return super.getCourses();
     }
 
     @Override
